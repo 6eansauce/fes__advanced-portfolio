@@ -17,6 +17,14 @@ ul {
   list-style-type: none;
 }
 
+p {
+  line-height: 1.5;
+}
+
+a {
+  text-decoration-line: none;
+}
+
 /* 
 
   UTILITIES
@@ -27,8 +35,23 @@ ul {
   --color-base-white: #f5f5f5;
   --color-base-black: #242424;
 
+  --color-primary-accent: #f06449;
+
   /* Text */
   --color-text: var(--color-base-black);
+}
+
+.fab,
+.fas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 8px;
+  height: 8px;
+}
+
+.u-accent {
+  color: var(--color-primary-accent);
 }
 
 .u-min-vh {
@@ -66,6 +89,32 @@ ul {
 
 /* 
 
+  COMPONENTS
+
+*/
+
+.button {
+  appearance: none;
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  border-radius: var(--button-border-radius, 50%);
+  padding: var(--button-padding, 8px);
+  font-size: var(--button-font-size, 14px);
+
+  color: var(--button-content-color, #fff);
+  background: var(--button-background, #000);
+}
+
+.button::hov {
+
+}
+
+/* 
+
   MASTHEAD
 
 */
@@ -78,14 +127,7 @@ ul {
   height: 100px;
   justify-content: space-between;
 }
-.hero {
-  flex: 1;
-  justify-content: center;
-  
-  min-width: 62rem;
-  margin-inline: auto;
-  margin-block-end: 48px;
-}
+
 
 .nav__list {
   gap: 24px;
@@ -115,4 +157,43 @@ ul {
 
 .fa-adjust {
   font-size: 1.25rem;
+}
+
+.hero {
+  flex: 1;
+  justify-content: center;
+
+  width: min(62rem, 100%);
+  margin-inline: auto;
+  margin-block-end: 48px;
+}
+
+.hero__title {
+  margin-block-end: 12px;
+  
+  font-size: 7.2rem;
+  line-height: 1;
+}
+
+.hero__description {
+  max-width: 34ch;
+  font-size: 1.5rem;
+  line-height: 2;
+}
+
+.socials {
+  gap: 12px;
+  margin-block-start: 16px;
+}
+
+.socials__link {
+  /* padding: 6px;
+  width: 32px;
+  height: 32px;
+  font-size: 0.875rem; 
+
+  border-radius: 50%;
+  */
+
+  --button-background: var(--color-primary-accent);
 }
