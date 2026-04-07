@@ -41,12 +41,6 @@ a {
   --color-text: var(--color-base-black);
 }
 
-.icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .u-accent {
   color: var(--color-primary-accent);
 }
@@ -105,9 +99,15 @@ a {
   font-size: var(--button-font-size, 14px);
 
   color: var(--button-content-color, #fff);
-  background: var(--button-background, #000);
+  background: var(--button-background, var(--color-base-black));
 
   transition: transform 200ms ease;
+}
+
+.button--hollow {
+  --button-background: transparent;
+  --button-content-color: var(--color-base-black);
+  border: 2px solid var(--color-base-black);
 }
 
 .button:hover {
@@ -120,7 +120,7 @@ a {
 
 /* 
 
-  MASTHEAD
+  HEADER
 
 */
 
@@ -133,7 +133,6 @@ a {
   justify-content: space-between;
 }
 
-
 .nav__list {
   gap: 24px;
 }
@@ -143,6 +142,13 @@ a {
   font-size: 1rem;
   font-weight: 700;
   color: var(--color-text);
+}
+
+.nav__theme-toggle {
+  --button-width: auto;
+  --button-content-color: var(--color-base-black);
+  --button-background: none;
+  --button-font-size: 1.25rem;
 }
 
 .brand {
@@ -159,9 +165,11 @@ a {
   letter-spacing: 1px;
 }
 
-.fa-adjust {
-  font-size: 1.25rem;
-}
+/*
+
+  HERO
+
+*/
 
 .hero {
   flex: 1;
@@ -189,4 +197,40 @@ a {
   gap: 12px;
   margin-block-start: 16px;
   --button-background: var(--color-primary-accent);
+}
+
+.email-button {
+  --button-width: 70px;
+  --button-height: 70px;
+  --button-font-size: 32px;
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 32px;
+}
+
+.scroll {
+  --button-width: 20px;
+  --button-height: 30px;
+  --button-border-radius: 16px;
+
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin: 16px;
+}
+
+.scroll__icon {
+  animation: scroll 1000ms infinite alternate-reverse;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(2px);
+  }
+
+  100% {
+    transition: translateY(-5px);
+  }
 }
