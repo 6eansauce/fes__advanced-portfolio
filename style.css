@@ -41,13 +41,10 @@ a {
   --color-text: var(--color-base-black);
 }
 
-.fab,
-.fas {
+.icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 8px;
-  height: 8px;
 }
 
 .u-accent {
@@ -96,21 +93,29 @@ a {
 .button {
   appearance: none;
   border: none;
+  cursor: pointer;
 
   display: flex;
   align-items: center;
   justify-content: center;
   
   border-radius: var(--button-border-radius, 50%);
-  padding: var(--button-padding, 8px);
+  width: var(--button-width, 32px);
+  height: var(--button-height, 32px);
   font-size: var(--button-font-size, 14px);
 
   color: var(--button-content-color, #fff);
   background: var(--button-background, #000);
+
+  transition: transform 200ms ease;
 }
 
-.button::hov {
+.button:hover {
+  transform: scale(120%);
+}
 
+.button:active {
+  transform: scale(100%);
 }
 
 /* 
@@ -141,7 +146,6 @@ a {
 }
 
 .brand {
-  align-items: center;
   gap: 12px;
 }
 
@@ -184,16 +188,5 @@ a {
 .socials {
   gap: 12px;
   margin-block-start: 16px;
-}
-
-.socials__link {
-  /* padding: 6px;
-  width: 32px;
-  height: 32px;
-  font-size: 0.875rem; 
-
-  border-radius: 50%;
-  */
-
   --button-background: var(--color-primary-accent);
 }
