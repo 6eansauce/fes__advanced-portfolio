@@ -37,8 +37,8 @@ a {
 
   --color-primary-accent: #f06449;
 
-  /* Text */
   --color-text: var(--color-base-black);
+  --color-background: var(--color-base-white);
 }
 
 .u-accent {
@@ -92,7 +92,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   border-radius: var(--button-border-radius, 50%);
   width: var(--button-width, 32px);
   height: var(--button-height, 32px);
@@ -125,7 +125,7 @@ a {
 */
 
 .masthead {
-  background: var(--color-base-white);
+  background: var(--color-background);
 }
 
 .header {
@@ -182,7 +182,7 @@ a {
 
 .hero__title {
   margin-block-end: 12px;
-  
+
   font-size: 7.2rem;
   line-height: 1;
 }
@@ -194,9 +194,10 @@ a {
 }
 
 .socials {
+  --button-background: var(--color-primary-accent);
+
   gap: 12px;
   margin-block-start: 16px;
-  --button-background: var(--color-primary-accent);
 }
 
 .email-button {
@@ -233,4 +234,90 @@ a {
   100% {
     transition: translateY(-5px);
   }
+}
+
+/* 
+
+  PROJECTS
+
+*/
+
+.projects {
+  padding-block: 50px;
+  background: var(--color-background);
+}
+
+.projects__title {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.project {
+  position: relative;
+
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.project::after {
+  /* Dark background for hover */
+  content: "";
+  position: absolute;
+  inset: 0;
+  
+  opacity: 0;
+  background: #1c1d25;
+}
+
+.project__content {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  
+  justify-content: center;
+  gap: 8px;
+  
+  max-width: 60ch;
+  margin-inline: 90px;
+  
+  transform: translateY(5%);
+  opacity: 0;
+  color: white;
+}
+
+.project__title {
+  font-size: 3rem;
+}
+
+.project__description {
+  margin-block: 8px;
+}
+
+.project__links {
+  gap: 16px;
+}
+
+.project__link {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.project::after,
+.project__content,
+.project__media {
+  transition: all 200ms ease;
+}
+
+.project:hover::after {
+  opacity: 0.7;
+}
+
+.project:hover .project__media {
+  transform: scale(1.07);
+  filter: blur(5px);
+}
+
+.project:hover .project__content {
+  opacity: 1;
+  transform: translateY(0%);
 }
