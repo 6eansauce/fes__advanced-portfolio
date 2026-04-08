@@ -14,21 +14,26 @@
   <body>
     <header class="masthead">
       <div class="l-container l-col u-min-vh">
-        <div class="header l-row">
-          <span class="brand l-row-align-center">
-            <span class="brand__name">Oscar J.</span>
+        <div class="header l-row u-align-center u-justify-between">
+          <span class="brand l-row">
+            <!-- 
+                <span class="header__brand-logo">
+                  <img src="" alt="">
+                </span> 
+                -->
+            <span class="brand__name">BRAND</span>
           </span>
 
-          <nav class="nav l-row">
-            <ul class="nav__list l-row-align-center">
+          <nav class="nav">
+            <ul class="nav__list l-row u-align-center">
               <li class="nav__item">
-                <a href="#about" class="nav__link">About</a>
+                <a href="#about" class="nav__link link">About</a>
               </li>
               <li class="nav__item">
-                <a href="#projects" class="nav__link">Projects</a>
+                <a href="#projects" class="nav__link link">Projects</a>
               </li>
               <li class="nav__item">
-                <a href="#contact" class="nav__link">Contact</a>
+                <a href="#contact" class="nav__link link">Contact</a>
               </li>
               <button class="nav__theme-toggle button">
                 <i class="fas fa-adjust"></i>
@@ -37,7 +42,7 @@
           </nav>
         </div>
 
-        <div class="hero l-col">
+        <div class="hero l-col u-justify-center">
           <h1 class="hero__title">
             Hey<br /><span class="u-accent">I'm Oscar.</span>
           </h1>
@@ -51,7 +56,7 @@
 
           <ul class="socials l-row">
             <li>
-              <a class="button" href="#" target="_blank">
+              <a class="button is-disabled" href="#" target="_blank">
                 <i class="fab fa-linkedin-in icon"></i>
               </a>
             </li>
@@ -65,14 +70,14 @@
               </a>
             </li>
             <li>
-              <a class="button" href="#" target="_blank">
+              <a class="button is-disabled" href="#" target="_blank">
                 <i class="fas fa-file-pdf icon"></i>
               </a>
             </li>
           </ul>
         </div>
 
-        <button class="button email-button">
+        <button class="button email-button is-disabled">
           <i class="fas fa-envelope"></i>
         </button>
 
@@ -84,47 +89,111 @@
 
     <main>
       <section id="projects" class="projects section">
-        <div class="l-container">
-          <h1 class="projects__title">
-            Here are some of my <span class="u-accent">projects</span>
-          </h1>
-          <ul class="projects__list">
-            <li class="project l-col">
-              <span class="project__media">
-                <img src="./assets/blinker mockup.png" alt="" />
-              </span>
+        <div class="l-container l-row u-align-center u-min-vh">
+          <div class="projects__inner l-col">
+            <h1 class="projects__title">
+              Here are some of my <span class="u-accent">projects</span>
+            </h1>
+            <ul class="projects__list l-col">
+              <li class="project l-col">
+                <span class="project__media">
+                  <img src="./assets/blinker mockup.png" alt="" />
+                </span>
 
-              <div class="project__content l-col">
-                <h3 class="project__title">Car Sales Project</h3>
-                <h4 class="project__subtitle">HTML, CSS, Javascript</h4>
-                <p class="project__description">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Dolorem dolor voluptate quasi nostrum, quia voluptatem non
-                  consequuntur nemo officiis eligendi!
-                </p>
-                <ul class="project__links l-row">
-                  <li>
-                    <a href="#" class="project__link">
-                      <i class="fab fa-github"></i>
-                    </a>
-                  </li>
+                <div class="project__content l-col">
+                  <h3 class="project__title">Car Sales Project</h3>
+                  <h4 class="project__subtitle">HTML, CSS, Javascript</h4>
+                  <p class="project__description">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Dolorem dolor voluptate quasi nostrum, quia voluptatem non
+                    consequuntur nemo officiis eligendi!
+                  </p>
 
-                  <li>
-                    <a href="#" class="project__link">
-                      <i class="fas fa-link"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-          </ul>
+                  <ul class="project__links l-row">
+                    <li>
+                      <a href="#" class="project__link is-disabled">
+                        <i class="fab fa-github"></i>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="#" class="project__link is-disabled">
+                        <i class="fas fa-link"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <!--     
+              <li class="project l-col">
+                <span class="project__media">
+                  <img src="./assets/blinker mockup.png" alt="" />
+                </span>
+  
+                <div class="project__content l-col">
+                  <h3 class="project__title">Car Sales Project</h3>
+                  <h4 class="project__subtitle">HTML, CSS, Javascript</h4>
+                  <p class="project__description">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Dolorem dolor voluptate quasi nostrum, quia voluptatem non
+                    consequuntur nemo officiis eligendi!
+                  </p>
+                  <ul class="project__links l-row">
+                    <li>
+                      <a href="#" class="project__link">
+                        <i class="fab fa-github"></i>
+                      </a>
+                    </li>
+  
+                    <li>
+                      <a href="#" class="project__link">
+                        <i class="fas fa-link"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              -->
+            </ul>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer>
-      <div class="l-container">
-        <!--  -->
+    <footer class="footer">
+      <div class="l-container l-col u-align-center">
+        <div class="footer__inner l-col u-align-center">
+          <span class="brand l-row">
+            <!--
+            <span class="header__brand-logo">
+              <img src="" alt="">
+            </span> 
+            -->
+            <span class="brand__name">BRAND</span>
+          </span>
+
+          <ul class="footer__socials l-row">
+            <li>
+              <a href="https://github.com/6eansauce" class="footer__link link"
+                >GitHub</a
+              >
+            </li>
+            <li>
+              <a href="#" class="footer__link link is-disabled">LinkedIn</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link link is-disabled">Email</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link link is-disabled">Resume</a>
+            </li>
+          </ul>
+
+          <span class="footer__copyright">
+            Copyright &copy; 2026 Oscar Jovel
+          </span>
+        </div>
       </div>
     </footer>
   </body>
