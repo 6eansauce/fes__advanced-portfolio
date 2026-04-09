@@ -86,32 +86,59 @@
           <i class="fas fa-arrow-down scroll__icon"></i>
         </a>
 
-        <div class="modal l-row">
+        <div class="modal l-col">
           <div class="modal__content modal__content--about-me l-col">
-            <div class="modal__header">
-              <h2 class="modal__title">Here's a bit about me.</h2>
-              <p class="modal__subtitle">Frontend Software Engineer</p>
+            <div class="modal__header l-col">
+              <h3 class="modal__title">Here's a bit about me.</h3>
+              <h4 class="modal__subtitle">Frontend Software Engineer</h4>
             </div>
 
             <p class="modal__description">
               I am a 20 year-old Hispanic-American frontend software engineer
               with a strong passion for developing website with great user
-              experience.
+              experiences.
+              <br />
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis
+              totam sint, impedit iure laboriosam sequi suscipit provident?
+              Accusantium, vel iusto.
             </p>
 
-            <ul class="modal__list">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>Javascript</li>
+            <ul class="modal__languages l-row">
+              <li class="language">
+                <span class="language__logo">
+                  <img src="./assets/javscript.png" alt="Javascript Logo" />
+                </span>
+
+                <span class="language__title">Javascript</span>
+              </li>
+
+              <li class="language">
+                <span class="language__logo">
+                  <img src="./assets/html.svg" alt="HTML Logo" />
+                </span>
+
+                <span class="language__title">HTML</span>
+              </li>
+
+              <li class="language">
+                <span class="language__logo">
+                  <img src="./assets/css.svg" alt="CSS Logo" />
+                </span>
+
+                <span class="language__title">CSS</span>
+              </li>
             </ul>
           </div>
 
           <div class="modal__content modal__content--contact-me l-col">
-            <div class="modal__header">
-              <h2>Let's have a chat</h2>
-              <p>I'm currently open to new opportunities</p>
+            <div class="modal__header l-col">
+              <h3 class="modal__title">Let's have a chat</h3>
+              <h4 class="modal__subtitle">
+                I'm currently open to new opportunities
+              </h4>
             </div>
-            <form action="" class="modal__form">
+
+            <form action="" class="modal__form l-col">
               <div class="modal__form-field">
                 <label for="name" class="modal__form-label">Name</label>
                 <input type="text" name="name" id="" required />
@@ -121,7 +148,14 @@
                 <label for="email" class="modal__form-label">Email</label>
                 <input type="email" name="email" id="" required />
               </div>
+
+              <div class="modal__form-field">
+                <label for="message" class="modal__form-label">Email</label>
+                <textarea name="message" id=""></textarea>
+              </div>
             </form>
+
+            <button class="modal__close button"></button>
           </div>
         </div>
       </div>
@@ -164,37 +198,6 @@
                   </ul>
                 </div>
               </li>
-
-              <!--     
-              <li class="project l-col">
-                <span class="project__media">
-                  <img src="./assets/blinker mockup.png" alt="" />
-                </span>
-  
-                <div class="project__content l-col">
-                  <h3 class="project__title">Car Sales Project</h3>
-                  <h4 class="project__subtitle">HTML, CSS, Javascript</h4>
-                  <p class="project__description">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Dolorem dolor voluptate quasi nostrum, quia voluptatem non
-                    consequuntur nemo officiis eligendi!
-                  </p>
-                  <ul class="project__links l-row">
-                    <li>
-                      <a href="#" class="project__link">
-                        <i class="fab fa-github"></i>
-                      </a>
-                    </li>
-  
-                    <li>
-                      <a href="#" class="project__link">
-                        <i class="fas fa-link"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              -->
             </ul>
           </div>
         </div>
