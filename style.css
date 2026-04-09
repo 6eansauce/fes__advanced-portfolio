@@ -41,8 +41,8 @@ a {
   --color-text: var(--color-base-black);
   --color-text-invert: #ffffff;
 
-  --color-background: var(--color-base-white);
-  --color-footer-background: var(--color-base-black);
+  --color-background-primary: var(--color-base-white);
+  --color-background-secondary: var(--color-base-black);
 }
 
 .u-accent {
@@ -114,7 +114,7 @@ a {
   font-size: var(--button-font-size, 14px);
 
   color: var(--button-content-color, #fff);
-  background: var(--button-background, var(--color-base-black));
+  background: var(--button-background, var(--color-background-secondary));
 
   transition: transform 200ms ease;
 }
@@ -178,7 +178,7 @@ a {
 */
 
 .masthead {
-  background: var(--color-background);
+  background: var(--color-background-primary);
 }
 
 .header {
@@ -270,12 +270,44 @@ a {
 
 /* 
 
+  MODAL
+
+*/
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.modal__content {
+  flex: 1;
+  gap: 1rem;
+  padding: 3rem;
+}
+
+.modal__content--about-me {
+  color: var(--color-text);
+  background: #ffffff;
+}
+
+.modal__content--contact-me {
+  color: var(--color-text-invert);
+  background: var(--color-base-black);
+}
+
+/* 
+
   PROJECTS SECTION
 
 */
 
 .projects {
-  background: var(--color-background);
+  background: var(--color-background-primary);
 }
 
 .projects__inner {
@@ -371,7 +403,7 @@ a {
 
 .footer {
   color: var(--color-text-invert);
-  background: var(--color-footer-background);
+  background: var(--color-background-secondary);
 }
 
 .footer__inner {
