@@ -87,7 +87,7 @@
         </a>
 
         <div class="modal l-col">
-          <div class="modal__content modal__content--about-me l-col">
+          <div class="modal__inner modal__inner--about l-col">
             <div class="modal__header l-col">
               <h3 class="modal__title">Here's a bit about me.</h3>
               <h4 class="modal__subtitle">Frontend Software Engineer</h4>
@@ -130,7 +130,7 @@
             </ul>
           </div>
 
-          <div class="modal__content modal__content--contact-me l-col">
+          <div class="modal__inner modal__inner--contact l-col">
             <div class="modal__header l-col">
               <h3 class="modal__title">Let's have a chat</h3>
               <h4 class="modal__subtitle">
@@ -138,20 +138,20 @@
               </h4>
             </div>
 
-            <form action="" class="modal__form l-col">
-              <div class="modal__form-field">
-                <label for="name" class="modal__form-label">Name</label>
-                <input type="text" name="name" id="" required />
+            <form id="contact-form" action="" class="contact__form l-col">
+              <div class="contact__field">
+                <label for="name" class="contact__label">Name</label>
+                <input type="text" name="name" id="" class="contact__input" required />
               </div>
 
-              <div class="modal__form-field">
-                <label for="email" class="modal__form-label">Email</label>
-                <input type="email" name="email" id="" required />
+              <div class="contact__field">
+                <label for="email" class="contact__label">E-mail</label>
+                <input type="email" name="email" id="" class="contact__input" required />
               </div>
 
-              <div class="modal__form-field">
-                <label for="message" class="modal__form-label">Email</label>
-                <textarea name="message" id=""></textarea>
+              <div class="contact__field">
+                <label for="message" class="contact__label">Message</label>
+                <textarea name="message" id="" class="contact__input"></textarea>
               </div>
             </form>
 

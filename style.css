@@ -285,19 +285,19 @@ a {
   box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.55);
 }
 
-.modal__content {
+.modal__inner {
   flex: 1;
   gap: 1.5rem;
   padding-block: 2.5rem;
   padding-inline: 4.5rem;
 }
 
-.modal__content--about-me {
+.modal__inner--about {
   color: var(--color-text);
-  background: #ffffff;
+  background: rgb(255, 255, 255);
 }
 
-.modal__content--contact-me {
+.modal__inner--contact {
   color: var(--color-text-invert);
   background: var(--color-base-black);
 }
@@ -310,13 +310,8 @@ a {
   font-size: 1.625rem;
 }
 
-.modal__description {
-  line-height: 1.75;
-}
-
-.modal__languages {
-  justify-content: space-around;
-  gap: 1rem;
+.modal__subtitle {
+  font-size: 0.875rem;
 }
 
 .modal__close {
@@ -332,6 +327,15 @@ a {
 .modal__close::after {
   content: "+";
   transform: rotate(45deg);
+}
+
+.modal__description {
+  line-height: 1.75;
+}
+
+.modal__languages {
+  justify-content: space-around;
+  gap: 1rem;
 }
 
 .language {
@@ -352,14 +356,24 @@ a {
   font-weight: 300;
 }
 
-.modal__form {
+
+.contact__form {
   gap: 1.5rem;
 }
 
-.modal__form-field {
+.contact__field {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+.contact__input {
+  padding: 0.875rem;
+  border: none;
+  border-bottom: 2px solid white;
+  
+  color: currentColor;
+  background: transparent;
 }
 
 /* 
