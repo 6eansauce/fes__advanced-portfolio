@@ -35,7 +35,7 @@
               <li class="nav__item">
                 <a href="#contact" class="nav__link link">Contact</a>
               </li>
-              <button class="nav__theme-toggle button">
+              <button class="button button--circle nav__theme-toggle">
                 <i class="fas fa-adjust"></i>
               </button>
             </ul>
@@ -57,13 +57,17 @@
 
           <ul class="socials l-row">
             <li>
-              <a class="button is-disabled" href="#" target="_blank">
+              <a
+                class="button button--circle is-disabled"
+                href="#"
+                target="_blank"
+              >
                 <i class="fab fa-linkedin-in icon"></i>
               </a>
             </li>
             <li>
               <a
-                class="button"
+                class="button button--circle"
                 href="https://github.com/6eansauce"
                 target="_blank"
               >
@@ -71,14 +75,18 @@
               </a>
             </li>
             <li>
-              <a class="button is-disabled" href="#" target="_blank">
+              <a
+                class="button button--circle is-disabled"
+                href="#"
+                target="_blank"
+              >
                 <i class="fas fa-file-pdf icon"></i>
               </a>
             </li>
           </ul>
         </div>
 
-        <button class="button email-button is-disabled">
+        <button class="button button--circle email-button is-disabled">
           <i class="fas fa-envelope"></i>
         </button>
 
@@ -86,76 +94,98 @@
           <i class="fas fa-arrow-down scroll__icon"></i>
         </a>
 
-        <div class="modal l-col">
-          <div class="modal__inner modal__inner--about l-col">
-            <div class="modal__header l-col">
-              <h3 class="modal__title">Here's a bit about me.</h3>
-              <h4 class="modal__subtitle">Frontend Software Engineer</h4>
+        <div class="modal l-center u-min-vh">
+          <div class="modal__inner l-col">
+            <div class="modal__content modal__content--light l-col">
+              <div class="modal__header l-col">
+                <h3 class="modal__title">Here's a bit about me.</h3>
+                <h4 class="modal__subtitle">Frontend Software Engineer</h4>
+              </div>
+
+              <p class="modal__description">
+                I am a 20 year-old Hispanic-American frontend software engineer
+                with a strong passion for developing website with great user
+                experiences.
+                <br />
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Facilis totam sint, impedit iure laboriosam sequi suscipit
+                provident? Accusantium, vel iusto.
+              </p>
+
+              <ul class="modal__languages l-row">
+                <li class="language">
+                  <span class="language__logo">
+                    <img src="./assets/javscript.png" alt="Javascript Logo" />
+                  </span>
+
+                  <span class="language__title">Javascript</span>
+                </li>
+
+                <li class="language">
+                  <span class="language__logo">
+                    <img src="./assets/html.svg" alt="HTML Logo" />
+                  </span>
+
+                  <span class="language__title">HTML</span>
+                </li>
+
+                <li class="language">
+                  <span class="language__logo">
+                    <img src="./assets/css.svg" alt="CSS Logo" />
+                  </span>
+
+                  <span class="language__title">CSS</span>
+                </li>
+              </ul>
             </div>
 
-            <p class="modal__description">
-              I am a 20 year-old Hispanic-American frontend software engineer
-              with a strong passion for developing website with great user
-              experiences.
-              <br />
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis
-              totam sint, impedit iure laboriosam sequi suscipit provident?
-              Accusantium, vel iusto.
-            </p>
+            <div class="modal__content l-col">
+              <div class="modal__header l-col">
+                <h3 class="modal__title">Let's have a chat</h3>
+                <h4 class="modal__subtitle">
+                  I'm currently open to new opportunities
+                </h4>
+              </div>
 
-            <ul class="modal__languages l-row">
-              <li class="language">
-                <span class="language__logo">
-                  <img src="./assets/javscript.png" alt="Javascript Logo" />
-                </span>
+              <form id="contact-form" action="" class="contact__form l-col">
+                <div class="contact__field">
+                  <label for="contact-name" class="contact__label">Name</label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="contact-name"
+                    class="contact__input"
+                    required
+                  />
+                </div>
 
-                <span class="language__title">Javascript</span>
-              </li>
+                <div class="contact__field">
+                  <label for="contact-email" class="contact__label"
+                    >E-mail</label
+                  >
+                  <input
+                    type="email"
+                    name="email"
+                    id="contact-email"
+                    class="contact__input"
+                    required
+                  />
+                </div>
 
-              <li class="language">
-                <span class="language__logo">
-                  <img src="./assets/html.svg" alt="HTML Logo" />
-                </span>
-
-                <span class="language__title">HTML</span>
-              </li>
-
-              <li class="language">
-                <span class="language__logo">
-                  <img src="./assets/css.svg" alt="CSS Logo" />
-                </span>
-
-                <span class="language__title">CSS</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="modal__inner modal__inner--contact l-col">
-            <div class="modal__header l-col">
-              <h3 class="modal__title">Let's have a chat</h3>
-              <h4 class="modal__subtitle">
-                I'm currently open to new opportunities
-              </h4>
+                <div class="contact__field">
+                  <label for="contact-message" class="contact__label"
+                    >Message</label
+                  >
+                  <textarea
+                    name="message"
+                    id="contact-message"
+                    class="contact__input"
+                  ></textarea>
+                </div>
+              </form>
             </div>
 
-            <form id="contact-form" action="" class="contact__form l-col">
-              <div class="contact__field">
-                <label for="name" class="contact__label">Name</label>
-                <input type="text" name="name" id="" class="contact__input" required />
-              </div>
-
-              <div class="contact__field">
-                <label for="email" class="contact__label">E-mail</label>
-                <input type="email" name="email" id="" class="contact__input" required />
-              </div>
-
-              <div class="contact__field">
-                <label for="message" class="contact__label">Message</label>
-                <textarea name="message" id="" class="contact__input"></textarea>
-              </div>
-            </form>
-
-            <button class="modal__close button"></button>
+            <button class="button button--circle modal__close"></button>
           </div>
         </div>
       </div>
