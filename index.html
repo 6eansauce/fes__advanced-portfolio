@@ -13,9 +13,9 @@
 
   <body>
     <header class="masthead">
-      <div class="l-container l-col u-min-vh">
-        <div class="header l-row u-align-center u-justify-between">
-          <span class="brand l-row">
+      <div class="l-container l-stack u-min-vh">
+        <div class="header u-flex u-align-center u-justify-between">
+          <span class="brand">
             <!-- 
                 <span class="header__brand-logo">
                   <img src="" alt="">
@@ -25,7 +25,7 @@
           </span>
 
           <nav class="nav">
-            <ul class="nav__list l-row u-align-center">
+            <ul class="nav__list l-inline u-align-center">
               <li class="nav__item">
                 <a href="#about" class="nav__link link">About</a>
               </li>
@@ -42,7 +42,7 @@
           </nav>
         </div>
 
-        <div class="hero l-col u-justify-center">
+        <div class="hero l-stack u-justify-center">
           <h1 class="hero__title">
             Hey<br /><span class="u-accent">I'm Oscar.</span>
           </h1>
@@ -55,7 +55,7 @@
             <a href="#" class="link u-accent"><b>about me.</b></a>
           </p>
 
-          <ul class="socials l-row">
+          <ul class="socials">
             <li>
               <a
                 class="button button--circle is-disabled"
@@ -95,9 +95,9 @@
         </a>
 
         <div class="modal l-center u-min-vh">
-          <div class="modal__inner l-col">
-            <div class="modal__content modal__content--light l-col">
-              <div class="modal__header l-col">
+          <div class="modal__inner l-stack">
+            <div class="modal__content modal__content--light">
+              <div class="modal__header">
                 <h3 class="modal__title">Here's a bit about me.</h3>
                 <h4 class="modal__subtitle">Frontend Software Engineer</h4>
               </div>
@@ -112,7 +112,7 @@
                 provident? Accusantium, vel iusto.
               </p>
 
-              <ul class="modal__languages l-row">
+              <ul class="modal__languages">
                 <li class="language">
                   <span class="language__logo">
                     <img src="./assets/javscript.png" alt="Javascript Logo" />
@@ -139,15 +139,15 @@
               </ul>
             </div>
 
-            <div class="modal__content l-col">
-              <div class="modal__header l-col">
+            <div class="modal__content">
+              <div class="modal__header">
                 <h3 class="modal__title">Let's have a chat</h3>
                 <h4 class="modal__subtitle">
                   I'm currently open to new opportunities
                 </h4>
               </div>
 
-              <form id="contact-form" action="" class="contact__form l-col">
+              <form id="contact-form" action="" class="contact__form l-stack">
                 <div class="contact__field">
                   <label for="contact-name" class="contact__label">Name</label>
                   <input
@@ -183,8 +183,20 @@
                   ></textarea>
                 </div>
 
-                <button id="contact-submit" type="submit" class="button contact__submit">Send it my way</button>
+                <button
+                  id="contact-submit"
+                  type="submit"
+                  class="button contact__submit"
+                >
+                  Send it my way
+                </button>
               </form>
+
+              <div class="modal__overlay l-center">
+                <span class="spinner icon">
+                  <i class="fas fa-spinner"></i>
+                </span>
+              </div>
             </div>
 
             <button class="button button--circle modal__close"></button>
@@ -195,18 +207,19 @@
 
     <main>
       <section id="projects" class="projects section">
-        <div class="l-container l-row u-align-center u-min-vh">
-          <div class="projects__inner l-col">
+        <div class="l-container">
+          <div class="projects__inner l-stack u-justify-center u-min-vh">
             <h1 class="projects__title">
               Here are some of my <span class="u-accent">projects</span>
             </h1>
-            <ul class="projects__list l-col">
-              <li class="project l-col">
+
+            <ul class="projects__list l-stack">
+              <li class="project">
                 <span class="project__media">
                   <img src="./assets/blinker mockup.png" alt="" />
                 </span>
 
-                <div class="project__content l-col">
+                <div class="project__content">
                   <h3 class="project__title">Car Sales Project</h3>
                   <h4 class="project__subtitle">HTML, CSS, Javascript</h4>
                   <p class="project__description">
@@ -215,7 +228,7 @@
                     consequuntur nemo officiis eligendi!
                   </p>
 
-                  <ul class="project__links l-row">
+                  <ul class="project__links">
                     <li>
                       <a href="#" class="project__link is-disabled">
                         <i class="fab fa-github"></i>
@@ -237,9 +250,9 @@
     </main>
 
     <footer class="footer">
-      <div class="l-container l-col u-align-center">
-        <div class="footer__inner l-col u-align-center">
-          <span class="brand l-row">
+      <div class="l-container">
+        <div class="footer__inner l-stack u-align-center">
+          <span class="brand">
             <!--
             <span class="header__brand-logo">
               <img src="" alt="">
@@ -248,20 +261,20 @@
             <span class="brand__name">BRAND</span>
           </span>
 
-          <ul class="footer__socials l-row">
+          <ul class="footer__socials l-inline">
             <li>
-              <a href="https://github.com/6eansauce" class="footer__link link"
+              <a href="https://github.com/6eansauce" class="link"
                 >GitHub</a
               >
             </li>
             <li>
-              <a href="#" class="footer__link link is-disabled">LinkedIn</a>
+              <a href="#" class="link is-disabled">LinkedIn</a>
             </li>
             <li>
-              <a href="#" class="footer__link link is-disabled">Email</a>
+              <a href="#" class="link is-disabled">Email</a>
             </li>
             <li>
-              <a href="#" class="footer__link link is-disabled">Resume</a>
+              <a href="#" class="link is-disabled">Resume</a>
             </li>
           </ul>
 
