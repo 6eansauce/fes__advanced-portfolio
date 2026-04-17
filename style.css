@@ -369,8 +369,44 @@ a {
   position: absolute;
   inset: 0;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-inline: 1.2em;
+
+  background: var(--modal-background);
+}
+
+.modal__overlay--loading {
+  z-index: 2;
   font-size: 80px;
   background: var(--color-background-secondary);
+}
+
+.modal__overlay--success {
+  z-index: 0;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  background: green;
+}
+
+.modal__close {
+  --button-font-size: 3rem;
+  --button-background: transparent;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0.3em;z-index: 1;
+
+  color: var(--modal-close-color, var(--color-text));
+}
+
+.modal__close::after {
+  content: "+";
+  transform: rotate(45deg);
 }
 
 .modal__header {
@@ -387,22 +423,6 @@ a {
   font-size: clamp(0.625rem, 3vw, 0.875rem);
 }
 
-.modal__close {
-  --button-font-size: 3rem;
-  --button-background: transparent;
-
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 0.3em;
-
-  color: var(--modal-close-color, var(--color-text));
-}
-
-.modal__close::after {
-  content: "+";
-  transform: rotate(45deg);
-}
 
 .modal__description {
   line-height: 1.75;
