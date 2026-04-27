@@ -9,6 +9,18 @@
       src="https://kit.fontawesome.com/fb4e81fea9.js"
       crossorigin="anonymous"
     ></script>
+    <script src="index.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "5TywGMJcX1FTVS8qr",
+        });
+      })();
+    </script>
   </head>
 
   <body>
@@ -147,44 +159,47 @@
                 </h4>
               </div>
 
-              <form id="contact-form" action="" class="contact__form l-stack">
+              <form
+                id="contact-form"
+                onsubmit="contact(event)"
+                action=""
+                class="contact__form l-stack"
+              >
                 <div class="contact__field">
-                  <label for="contact-name" class="contact__label">Name</label>
+                  <label for="contactName" class="contact__label">Name</label>
                   <input
-                    type="text"
-                    name="name"
-                    id="contact-name"
+                    id="contactName"
                     class="contact__input"
-                    required
+                    type="text"
+                    name="user_name"
                   />
                 </div>
 
                 <div class="contact__field">
-                  <label for="contact-email" class="contact__label"
+                  <label for="contactEmail" class="contact__label"
                     >E-mail</label
                   >
                   <input
+                    id="contactEmail"
+                    class="contact__input"
                     type="email"
                     name="email"
-                    id="contact-email"
-                    class="contact__input"
-                    required
                   />
                 </div>
 
                 <div class="contact__field">
-                  <label for="contact-message" class="contact__label"
+                  <label for="contactMessage" class="contact__label"
                     >Message</label
                   >
                   <textarea
-                    name="message"
-                    id="contact-message"
+                    id="contactMessage"
                     class="contact__input"
+                    name="message"
                   ></textarea>
                 </div>
 
                 <button
-                  id="contact-submit"
+                  id="contactSubmit"
                   type="submit"
                   class="button contact__submit"
                 >
@@ -199,7 +214,10 @@
               </div>
 
               <div class="modal__overlay modal__overlay--success">
-                <p>Thanks for the message! Looking forward to speaking to you soon.</p>
+                <p>
+                  Thanks for the message! Looking forward to speaking to you
+                  soon.
+                </p>
               </div>
             </div>
 
