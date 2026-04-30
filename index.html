@@ -17,7 +17,7 @@
     <script type="text/javascript">
       (function () {
         emailjs.init({
-          publicKey: "5TywGMJcX1FTVS8qr",
+          publicKey: "OIQPHws5LfIX9MeUL",
         });
       })();
     </script>
@@ -64,7 +64,7 @@
             with a strong passion for building web applications with great user
             experiences.
             <br />Here's a bit more
-            <a href="#" class="link u-accent"><b>about me.</b></a>
+            <a href="#" class="link" onclick="toggleModal()"><b class="u-accent">about me.</b></a>
           </p>
 
           <ul class="socials">
@@ -98,7 +98,7 @@
           </ul>
         </div>
 
-        <button class="button button--circle email-button is-disabled">
+        <button class="button button--circle email-button" onclick="toggleModal()">
           <i class="fas fa-envelope"></i>
         </button>
 
@@ -162,7 +162,6 @@
               <form
                 id="contact-form"
                 onsubmit="contact(event)"
-                action=""
                 class="contact__form l-stack"
               >
                 <div class="contact__field">
@@ -183,7 +182,8 @@
                     id="contactEmail"
                     class="contact__input"
                     type="email"
-                    name="email"
+                    name="user_email"
+                    required
                   />
                 </div>
 
@@ -194,7 +194,8 @@
                   <textarea
                     id="contactMessage"
                     class="contact__input"
-                    name="message"
+                    name="user_message"
+                    required
                   ></textarea>
                 </div>
 
@@ -202,6 +203,7 @@
                   id="contactSubmit"
                   type="submit"
                   class="button contact__submit"
+                  required
                 >
                   Send it my way
                 </button>
@@ -221,7 +223,7 @@
               </div>
             </div>
 
-            <button class="button button--circle modal__close"></button>
+            <button class="button button--circle modal__close" onclick="toggleModal()"></button>
           </div>
         </div>
       </div>
